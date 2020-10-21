@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(violet,gray);
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+#numpad {
+    display: grid;
+    /* every auto is to put a new column automatically */
+    grid-template-columns: auto auto auto;
+    /* fr is a fraction */
+    grid-template-rows: auto auto auto;
+    /* gap will put a margin between rows and columns */
+    gap: 5px 5px;
+    /* the grid will divide automatically the width and the height into 3 columns */
+    height: 40vmin;
+    width: 40vmin;
+    text-align: center;
+}
+
+#numpad > div {
+    /* flex is good to center the content */
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+
+#layout {
+    width: 40vmin;
+    height: 40vmin;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 11fr 10fr 10fr 10fr 10fr;
+    gap: 10px 5px;
+}
+
+#layout > div {
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+
+#layout > div:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#layout > div:nth-of-type(2) {
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+
+#layout > div:nth-of-type(3) {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#layout > div:nth-of-type(4) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+
+#layout > div:nth-of-type(5) {
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.div1, .div2, .div4 {
+    background-color: goldenrod;
+}
+
+.div3 {
+    width: 50%;
+    height: 100%;
+    background-color: cornsilk;
+}
+
+.div3:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div3:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 2.5% 2.5%;
+    padding: 2.5%;
+    box-sizing: border-box;
+    background-color: darkgoldenrod;
+}
+
+.div3-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornsilk;
+}
+
+.div5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: darkcyan;
+}
+
+.div5-3 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div5-3:nth-of-type(2) {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    background-color: darkcyan;
+}
+
+.div5-3:nth-of-type(2) > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div5-3:nth-of-type(2) > div:nth-of-type(1) {
+    background-color: aquamarine;
+}
+
+.div5-3:nth-of-type(2) > div:nth-of-type(2) {
+    background-color: rgb(104, 214, 205);
+}
+
+.div5-3:nth-of-type(2) > div:nth-of-type(3) {
+    background-color: rgb(103, 201, 214);
+}
